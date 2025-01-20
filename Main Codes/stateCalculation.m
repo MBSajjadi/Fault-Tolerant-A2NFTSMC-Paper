@@ -1,0 +1,16 @@
+function Q = stateCalculation(K1RK,xOld,uold,Ts,tOld,FaultTime,...
+                                            AlphaAngle,GammaAngle,Eta,w,v)
+
+     K2RK = Rotor2_Dynamic(tOld+Ts/2, xOld+Ts*K1RK/2,...
+                                        uold,FaultTime,AlphaAngle,GammaAngle,Eta,w);
+    
+    K3RK = Rotor2_Dynamic(tOld+Ts/2, xOld+Ts*K2RK/2,...
+                                        uold,FaultTime,AlphaAngle,GammaAngle,Eta,w);
+    
+    K4RK = Rotor2_Dynamic(tOld+Ts, xOld+Ts*K3RK,...
+                                        uold,FaultTime,AlphaAngle,GammaAngle,Eta,w);    
+    
+    Q = xOld+...
+           (Ts/6)*(K1RK + 2*K2RK + 2*K3RK + K4RK+v);
+
+end
