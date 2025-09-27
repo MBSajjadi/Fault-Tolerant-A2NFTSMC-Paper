@@ -107,16 +107,13 @@ $$
 \end{aligned}
 $$
 
-The observer gain \(L\) is defined as:  
-\[
-L = P^{-1}C^T
-\]
+The observer gain $L$ is defined as:  
+$L = P^{-1}C^T$
 
-The positive definite matrix \(P\) can be obtained by solving the Lyapunov equation:  
-\[
-A^T P + PA - C^T C + \delta P = 0
-\]  
-in which \(\delta > 0\) is chosen such that the equation admits a positive definite solution for \(P\).
+The positive definite matrix $P$ can be obtained by solving the Lyapunov equation:  
+$A^T P + PA - C^T C + \delta P = 0$
+
+in which $\delta > 0$ is chosen such that the equation admits a positive definite solution for $P$.
 
 -----------------
 ## 🎯 Non-singular Fast Terminal Sliding Mode Control
