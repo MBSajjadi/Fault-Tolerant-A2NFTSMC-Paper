@@ -6,9 +6,29 @@ We have developed a novel **Active Fault-Tolerant Adaptive Non-singular Fast Ter
 
 ---------------------------------------
 
-## ⚙️ Fault Description and Dynamics
+## 📝 A Perspective of the Control Objectives
 
-During flight or maneuvering, a drone may inevitably experience structural damage due to collisions with rigid objects, such as another UAV, a tree, or even an obstacle. Such incidents may cause one of the thrust forces of the drone to no longer operate in a vertical direction. It is important to emphasize that this collision does not necessarily degrade the motor efficiency but merely alters its orientation. The angles of deviation caused by such collision are demonstrated in Figure.
+- **Fault Modeling and Dynamics**  
+  - Novel motion equations are derived for a quadrotor UAV subjected to simultaneous actuator and structural faults.  
+  - These faults significantly alter the nonlinear dynamics of the system, requiring advanced control strategies to ensure stability and performance.  
+  - The proposed framework incorporates fault effects directly into the system model to enable accurate analysis and compensation.  
+
+- **Proposed Control Strategy (A2NFTSMC + FDI)**  
+  - An Active Fault-Tolerant Adaptive Non-singular Fast Terminal Sliding Mode Control (A2NFTSMC) is designed to ensure trajectory tracking despite faults.  
+  - A Fault Detection and Identification (FDI) unit is integrated for fault reconstruction and timely detection of combined failures.  
+  - Adaptive tuning of sliding mode switching gains improves robustness while minimizing overshoots under sudden and severe faults.  
+
+- **Performance and Validation**  
+  - Simulation results confirm effective trajectory tracking and fault accommodation in both small and severe fault scenarios.  
+  - The FD unit achieves accurate detection of combined faults with a detection delay of about 0.4 seconds.  
+  - Comparative studies show that the proposed controller achieves faster convergence and better disturbance rejection than other benchmark controllers.  
+
+--------------------------------------------
+
+## ⚙️ Fault Description and System Dynamics
+
+There exist probable conditions during flight in which quadrotors may experience a collision with other aircraft, a tree, or another object. This impact causes the PLOE of a motor due to the propeller damage and the deviation of the motor. Consequently, the faulty motor force no longer acts in the vertical direction, and its effectiveness will also be reduced. Hence, actuator and structural faults are inevitable. As a result, quadrotor dynamics must be accordingly derived to account for both structural fault (motor deviation) and actuator fault (the effectiveness alleviation of thrust). The demonstration of the aforementioned faults is depicted in Figure.
+According to the Figure, $\alpha$ and $\gamma$ denote the fault angles, and $\eta$ represents the loss of effectiveness factor of an actuator where $\eta=0$ denotes no actuator fault, $\eta=1$ means the complete failure of an actuator, and $0<\eta<1$ represents the PLOE of an actuator, respectively.
 The Assumptions regarding the mathematical modeling are described as follows:
 
 **Assumption 1.** The position of the center of mass is constant after the fault occurrence.
