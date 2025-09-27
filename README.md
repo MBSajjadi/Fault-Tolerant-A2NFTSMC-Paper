@@ -49,7 +49,7 @@ $$
 \ddot{z} &= -g + \left( c_{\phi}c_{\theta} \right)\frac{F_{1}+F_{2}+F_{3}+F_{4}}{m} 
            - \frac{k_f}{m}\dot{z} + u_{fz}, \\
 \ddot{\phi} &= \frac{I_y - I_z}{I_x}\dot{\theta}\dot{\psi} + \frac{J_{TP}}{I_x}\dot{\theta}\Omega 
-           + \frac{L(F_4 - F_2)}{I_x} - \frac{k_t l}{I_x}\dot{\phi} + u_{f\phi}, 
+           + \frac{L(F_4 - F_2)}{I_x} - \frac{k_t l}{I_x}\dot{\phi} + u_{f\phi}, \\
 \ddot{\theta} &= \frac{I_z - I_x}{I_y}\dot{\phi}\dot{\psi} - \frac{J_{TP}}{I_y}\dot{\phi}\Omega 
            + \frac{L(F_3 - F_1)}{I_y} - \frac{k_t l}{I_y}\dot{\theta} + u_{f\theta}, \\
 \ddot{\psi} &= \frac{I_x - I_y}{I_z}\dot{\phi}\dot{\theta} 
@@ -62,7 +62,7 @@ $$
 \begin{aligned}
 u_{fx} &= \left( s_{\phi}s_{\psi} + c_{\phi}s_{\theta}c_{\psi} \right)\frac{F_2}{m}\big((1-\eta)c_{\gamma} - 1\big) 
           + \frac{F_2}{m}c_{\psi}c_{\theta}s_{\gamma}c_{\alpha}(1-\eta) \\ 
-       &\quad + \left(-s_{\phi}c_{\psi} + c_{\phi}s_{\theta}s_{\psi}\right)\frac{F_2}{m}(1-\eta)s_{\gamma}c_{\alpha}, \\[6pt]
+       &\quad + \left(-s_{\phi}c_{\psi} + c_{\phi}s_{\theta}s_{\psi}\right)\frac{F_2}{m}(1-\eta)s_{\gamma}c_{\alpha}, \\
 u_{fy} &= \left(-s_{\phi}c_{\psi} + c_{\phi}s_{\theta}s_{\psi}\right)\frac{F_2}{m}\big((1-\eta)c_{\gamma} - 1\big) 
           + \frac{F_2}{m}s_{\psi}c_{\theta}s_{\gamma}c_{\alpha}(1-\eta) \\ 
        &\quad + \left(c_{\phi}c_{\psi} + s_{\phi}s_{\theta}s_{\psi}\right)\frac{F_2}{m}(1-\eta)s_{\gamma}s_{\alpha}, \\
