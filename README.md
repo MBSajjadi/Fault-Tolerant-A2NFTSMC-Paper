@@ -76,7 +76,7 @@ f_6 &= f_1 \cos\beta
 \end{aligned}
 $$
 
-![Quadrotor Fault Scenario](Figures/MainFig.jpg)
+![Quadrotor Fault Scenario](figures/MainFig.jpg)
 
 ------------------
 
