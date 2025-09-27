@@ -94,10 +94,10 @@ A Thau observer is designed as the FD unit based on residual generation and eval
 1. The pair $(A,C)$ must be observable.  
 
 2. The nonlinear continuous function $f(X(t),u(t))$ should be locally Lipschitz, satisfying: 
-\[
+$$
 \| f(X_2(t),u(t)) - f(X_1(t),u(t)) \| \leq \varrho_L \, \| X_2(t) - X_1(t) \|
-\]  
-where \(\varrho_L\) is the Lipschitz constant, and \(\|\cdot\|\) denotes the second norm of a vector or a matrix.  
+$$  
+where $\varrho_L$ is the Lipschitz constant, and $||.||$ denotes the second norm of a vector or a matrix.  
 
 As a result, the observer can be designed as:  
 \[
@@ -117,10 +117,6 @@ The positive definite matrix \(P\) can be obtained by solving the Lyapunov equat
 A^T P + PA - C^T C + \delta P = 0
 \]  
 in which \(\delta > 0\) is chosen such that the equation admits a positive definite solution for \(P\).
-
-
-
-
 
 -----------------
 ## 🎯 Non-singular Fast Terminal Sliding Mode Control
