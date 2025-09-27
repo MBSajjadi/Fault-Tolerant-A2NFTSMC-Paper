@@ -121,12 +121,12 @@ $$r_{ui} = \frac{k_{u1i}}{T_w} \int_{t-T_w}^{t} r_i(\tau)\mathrm{d}\tau + \frac{
 $$r_{li} = \frac{k_{l1i}}{T_w} \int_{t-T_w}^{t} r_i(\tau)\mathrm{d}\tau + \frac{k_{l2i}}{T_w} \int_{t-T_w}^{t} \left( r_i(\tau) - \frac{1}{T_w}\int_{t-T_w}^{t} r_i(\beta)\mathrm{d}\beta \right) \mathrm{d}\tau + k_{l3i}$$ 
 
 -----------------
-## 🎯 Non-singular Fast Terminal Sliding Mode Control
+## 🎯 Robust Trajectory Tracking and Path Following Control
 
 We may introduce the following non-singular sliding surfaces, for $i=1,3,5,7,9,11$:
 
 $$
-s_i = e_i + b_i \text{sign}^{\lambda_i}(e_i) + b_i' \text{sign}^{\lambda_i'}(\dot{e}_i)
+s_i = e_i + p_{1i} \text{sign}^{q_{1i}}(e_i) + p_{2i} \text{sign}^{q_{2i}}(\dot{e}_i)
 $$
 
 where $b_i' > 0$, $b_i > 0$, $1 < \lambda_i' < 2$, and $\lambda_i > 1$.  
