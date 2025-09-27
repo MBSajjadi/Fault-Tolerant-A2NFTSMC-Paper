@@ -94,17 +94,14 @@ A Thau observer is designed as the FD unit based on residual generation and eval
 1. The pair $(A,C)$ must be observable.  
 
 2. The nonlinear continuous function $f(X(t),u(t))$ should be locally Lipschitz, satisfying: 
-$\| f(X_2(t),u(t)) - f(X_1(t),u(t)) \| \leq \varrho_L \, \| X_2(t) - X_1(t) \|$
+   $||f(X_2(t),u(t)) - f(X_1(t),u(t))|| \leq \varrho_L ||X_2(t) - X_1(t)||$
 
 where $\varrho_L$ is the Lipschitz constant, and $||.||$ denotes the second norm of a vector or a matrix.  
 
 As a result, the observer can be designed as:  
-\[
-\begin{aligned}
-\dot{\hat{X}}(t) &= A\hat{X}(t) + Bu(t) + f(\hat{X}(t),u(t)) + L\big(y(t) - \hat{y}(t)\big), \\[6pt]
-\hat{y}(t) &= C\hat{X}(t).
-\end{aligned}
-\]
+
+$\dot{\hat{X}}(t) &= A\hat{X}(t) + Bu(t) + f(\hat{X}(t),u(t)) + L\big(y(t) - \hat{y}(t)\big)$ \\
+$\hat{y}(t) &= C\hat{X}(t)$
 
 The observer gain \(L\) is defined as:  
 \[
