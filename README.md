@@ -114,6 +114,19 @@ The positive definite matrix $P$ can be obtained by solving the Lyapunov equatio
 $A^T P + PA - C^T C + \delta P = 0$
 
 in which $\delta > 0$ is chosen such that the equation admits a positive definite solution for $P$.
+The adaptive boundaries can be then calculated as follows to form the residuals:
+
+$$
+r_{ui} = \frac{k_{u1i}}{T_w} \int_{t-T_w}^{t} r_i(\tau)\,d\tau 
++ \frac{k_{u2i}}{T_w} \int_{t-T_w}^{t} \left( r_i(\tau) - \frac{1}{T_w}\int_{t-T_w}^{t} r_i(\beta)\,d\beta \right) d\tau 
++ k_{u3i}
+$$  
+
+$$
+r_{li} = \frac{k_{l1i}}{T_w} \int_{t-T_w}^{t} r_i(\tau)\,d\tau 
++ \frac{k_{l2i}}{T_w} \int_{t-T_w}^{t} \left( r_i(\tau) - \frac{1}{T_w}\int_{t-T_w}^{t} r_i(\beta)\,d\beta \right) d\tau 
+- k_{l3i}
+$$
 
 -----------------
 ## 🎯 Non-singular Fast Terminal Sliding Mode Control
