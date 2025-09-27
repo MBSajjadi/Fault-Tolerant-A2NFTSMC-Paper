@@ -100,8 +100,12 @@ where $\varrho_L$ is the Lipschitz constant, and $||.||$ denotes the second norm
 
 As a result, the observer can be designed as:  
 
-$\dot{\hat{X}}(t) &= A\hat{X}(t) + Bu(t) + f(\hat{X}(t),u(t)) + L\big(y(t) - \hat{y}(t)\big)$ \\
-$\hat{y}(t) &= C\hat{X}(t)$
+$$
+\begin{aligned}
+\dot{\hat{X}}(t) &= A\hat{X}(t) + Bu(t) + f(\hat{X}(t),u(t)) + L\big(y(t) - \hat{y}(t)\big) \\
+\hat{y}(t) &= C\hat{X}(t)
+\end{aligned}
+$$
 
 The observer gain \(L\) is defined as:  
 \[
