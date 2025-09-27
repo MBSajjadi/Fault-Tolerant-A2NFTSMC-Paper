@@ -87,7 +87,42 @@ $$
 ![Quadrotor Fault Scenario](figures/MainFig.jpg)
 
 ------------------
+## 🧬 Fault Detection
 
+A Thau observer is designed as the FD unit based on residual generation and evaluation in this section. The conditions for the existence of a Thau observer for the system are as follows:
+
+1. The pair $(A,C)$ must be observable.  
+
+2. The nonlinear continuous function $f(X(t),u(t))$ should be locally Lipschitz, satisfying: 
+\[
+\| f(X_2(t),u(t)) - f(X_1(t),u(t)) \| \leq \varrho_L \, \| X_2(t) - X_1(t) \|
+\]  
+where \(\varrho_L\) is the Lipschitz constant, and \(\|\cdot\|\) denotes the second norm of a vector or a matrix.  
+
+As a result, the observer can be designed as:  
+\[
+\begin{aligned}
+\dot{\hat{X}}(t) &= A\hat{X}(t) + Bu(t) + f(\hat{X}(t),u(t)) + L\big(y(t) - \hat{y}(t)\big), \\[6pt]
+\hat{y}(t) &= C\hat{X}(t).
+\end{aligned}
+\]
+
+The observer gain \(L\) is defined as:  
+\[
+L = P^{-1}C^T
+\]
+
+The positive definite matrix \(P\) can be obtained by solving the Lyapunov equation:  
+\[
+A^T P + PA - C^T C + \delta P = 0
+\]  
+in which \(\delta > 0\) is chosen such that the equation admits a positive definite solution for \(P\).
+
+
+
+
+
+-----------------
 ## 🎯 Non-singular Fast Terminal Sliding Mode Control
 
 We may introduce the following non-singular sliding surfaces, for $i=1,3,5,7,9,11$:
