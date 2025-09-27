@@ -40,7 +40,7 @@ The Assumptions regarding the mathematical modeling are described as follows:
 
 The deflections from vertical directions add additional nonlinear terms to the system dynamics mathematically expressed as:
 
-\[
+$$
 \begin{aligned}
 \ddot{x} &= \left( s_{\phi}s_{\psi} + c_{\phi}s_{\theta}c_{\psi} \right)\frac{F_{1}+F_{2}+F_{3}+F_{4}}{m} 
            - \frac{k_f}{m}\dot{x} + u_{fx}, \\[6pt]
@@ -56,9 +56,9 @@ The deflections from vertical directions add additional nonlinear terms to the s
            + \frac{d}{bI_z}(F_1 - F_2 + F_3 - F_4) 
            - \frac{k_t l}{I_z}\dot{\psi} + u_{f\psi}.
 \end{aligned}
-\]
+$$
 
-\[
+$$
 \begin{aligned}
 u_{fx} &= \left( s_{\phi}s_{\psi} + c_{\phi}s_{\theta}c_{\psi} \right)\frac{F_2}{m}\big((1-\eta)c_{\gamma} - 1\big) 
           + \frac{F_2}{m}c_{\psi}c_{\theta}s_{\gamma}c_{\alpha}(1-\eta) \\ 
@@ -70,9 +70,9 @@ u_{fz} &= \left(c_{\phi}c_{\theta}\right)\frac{F_2}{m}\big((1-\eta)c_{\gamma} - 
           - \frac{F_2}{m}s_{\theta}s_{\gamma}c_{\alpha}(1-\eta) 
           + s_{\phi}c_{\theta}\frac{F_2}{m}(1-\eta)s_{\gamma}s_{\alpha}.
 \end{aligned}
-\]
+$$
 
-\[
+$$
 \begin{aligned}
 u_{f\phi} &= (1-\eta)\frac{F_2}{I_x}\left(-\tfrac{d}{b}s_{\gamma}c_{\alpha} - Lc_{\gamma} + \tfrac{L}{1-\eta}\right) 
            + \frac{J_{TP}}{I_x}\omega_2\left(\dot{\theta}(1-c_{\gamma}) + \dot{\psi}s_{\gamma}s_{\alpha}\right), \\[6pt]
@@ -81,7 +81,7 @@ u_{f\theta} &= (1-\eta)\frac{F_2}{I_y}\left(-\tfrac{d}{b}s_{\gamma}s_{\alpha}\ri
 u_{f\psi} &= (1-\eta)\frac{F_2}{I_z}\left(-\tfrac{d}{b}c_{\gamma} + Lc_{\alpha}s_{\gamma} + \tfrac{d}{b(1-\eta)}\right) 
            + \frac{J_{TP}}{I_z}\omega_2s_{\gamma}\left(\dot{\theta}c_{\alpha} - \dot{\phi}s_{\alpha}\right).
 \end{aligned}
-\]
+$$
 
 
 ![Quadrotor Fault Scenario](figures/MainFig.jpg)
