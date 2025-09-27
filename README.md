@@ -43,15 +43,15 @@ The deflections from vertical directions add additional nonlinear terms to the s
 $$
 \begin{aligned}
 \ddot{x} &= \left( s_{\phi}s_{\psi} + c_{\phi}s_{\theta}c_{\psi} \right)\frac{F_{1}+F_{2}+F_{3}+F_{4}}{m} 
-           - \frac{k_f}{m}\dot{x} + u_{fx}, \\
+           - \frac{k_f}{m}\dot{x} + u_{fx} \\
 \ddot{y} &= \left( -s_{\phi}c_{\psi} + c_{\phi}s_{\theta}s_{\psi} \right)\frac{F_{1}+F_{2}+F_{3}+F_{4}}{m} 
-           - \frac{k_f}{m}\dot{y} + u_{fy}, \\
+           - \frac{k_f}{m}\dot{y} + u_{fy} \\
 \ddot{z} &= -g + \left( c_{\phi}c_{\theta} \right)\frac{F_{1}+F_{2}+F_{3}+F_{4}}{m} 
-           - \frac{k_f}{m}\dot{z} + u_{fz}, \\
+           - \frac{k_f}{m}\dot{z} + u_{fz} \\
 \ddot{\phi} &= \frac{I_y - I_z}{I_x}\dot{\theta}\dot{\psi} + \frac{J_{TP}}{I_x}\dot{\theta}\Omega 
-           + \frac{L(F_4 - F_2)}{I_x} - \frac{k_t l}{I_x}\dot{\phi} + u_{f\phi}, \\
+           + \frac{L(F_4 - F_2)}{I_x} - \frac{k_t l}{I_x}\dot{\phi} + u_{f\phi} \\
 \ddot{\theta} &= \frac{I_z - I_x}{I_y}\dot{\phi}\dot{\psi} - \frac{J_{TP}}{I_y}\dot{\phi}\Omega 
-           + \frac{L(F_3 - F_1)}{I_y} - \frac{k_t l}{I_y}\dot{\theta} + u_{f\theta}, \\
+           + \frac{L(F_3 - F_1)}{I_y} - \frac{k_t l}{I_y}\dot{\theta} + u_{f\theta} \\
 \ddot{\psi} &= \frac{I_x - I_y}{I_z}\dot{\phi}\dot{\theta} 
            + \frac{d}{bI_z}(F_1 - F_2 + F_3 - F_4) 
            - \frac{k_t l}{I_z}\dot{\psi} + u_{f\psi}.
