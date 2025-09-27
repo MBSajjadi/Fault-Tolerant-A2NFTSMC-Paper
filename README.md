@@ -40,42 +40,49 @@ The Assumptions regarding the mathematical modeling are described as follows:
 
 The deflections from vertical directions add additional nonlinear terms to the system dynamics mathematically expressed as:
 
-$$
+\[
 \begin{aligned}
-\ddot{x} &= (s_{\phi}s_{\psi} + c_{\phi} s_{\theta} c_{\psi}) \frac{u_T}{m} - \frac{K_f}{m} \dot{x} + f_{stx} \\
-\ddot{y} &= (-s_{\phi} c_{\psi} + c_{\phi} s_{\theta} s_{\psi}) \frac{u_T}{m} - \frac{K_f}{m} \dot{y} + f_{sty} \\
-\ddot{z} &= -g + (c_{\phi} c_{\theta}) \frac{u_T}{m} - \frac{K_f}{m} \dot{z} + f_{stz} \\
-\ddot{\phi} &= \left(\frac{I_y - I_z}{I_x}\right) \dot{\theta} \dot{\psi} + \frac{J_{TP}}{I_x} \dot{\theta} \omega^* + \frac{u_\phi}{I_x} - \frac{K_tL}{I_x} \dot{\phi} + f_{st\phi} \\
-\ddot{\theta} &= \left(\frac{I_z - I_x}{I_y}\right) \dot{\phi} \dot{\psi} - \frac{J_{TP}}{I_y} \dot{\phi} \omega^* + \frac{u_\theta}{I_y} - \frac{K_tL}{I_y} \dot{\theta} + f_{st\theta} \\
-\ddot{\psi} &= \left(\frac{I_x - I_y}{I_z}\right) \dot{\phi} \dot{\theta} + \frac{u_\psi}{I_z} - \frac{K_tL}{I_z} \dot{\psi} + f_{st\psi}
+\ddot{x} &= \left( s_{\phi}s_{\psi} + c_{\phi}s_{\theta}c_{\psi} \right)\frac{F_{1}+F_{2}+F_{3}+F_{4}}{m} 
+           - \frac{k_f}{m}\dot{x} + u_{fx}, \\[6pt]
+\ddot{y} &= \left( -s_{\phi}c_{\psi} + c_{\phi}s_{\theta}s_{\psi} \right)\frac{F_{1}+F_{2}+F_{3}+F_{4}}{m} 
+           - \frac{k_f}{m}\dot{y} + u_{fy}, \\[6pt]
+\ddot{z} &= -g + \left( c_{\phi}c_{\theta} \right)\frac{F_{1}+F_{2}+F_{3}+F_{4}}{m} 
+           - \frac{k_f}{m}\dot{z} + u_{fz}, \\[6pt]
+\ddot{\phi} &= \frac{I_y - I_z}{I_x}\dot{\theta}\dot{\psi} + \frac{J_{TP}}{I_x}\dot{\theta}\Omega 
+           + \frac{L(F_4 - F_2)}{I_x} - \frac{k_t l}{I_x}\dot{\phi} + u_{f\phi}, \\[6pt]
+\ddot{\theta} &= \frac{I_z - I_x}{I_y}\dot{\phi}\dot{\psi} - \frac{J_{TP}}{I_y}\dot{\phi}\Omega 
+           + \frac{L(F_3 - F_1)}{I_y} - \frac{k_t l}{I_y}\dot{\theta} + u_{f\theta}, \\[6pt]
+\ddot{\psi} &= \frac{I_x - I_y}{I_z}\dot{\phi}\dot{\theta} 
+           + \frac{d}{bI_z}(F_1 - F_2 + F_3 - F_4) 
+           - \frac{k_t l}{I_z}\dot{\psi} + u_{f\psi}.
 \end{aligned}
-$$
+\]
 
-where:
-
-$$
+\[
 \begin{aligned}
-f_{stx} &= \frac{b}{m} \omega_2^2 \left( f_1 \cos\theta \cos\psi + f_2 (\cos\psi \sin\phi \sin\theta - \cos\phi \sin\psi) + f_3 (\sin\phi \sin\psi + \cos\phi \cos\psi \sin\theta) \right) \\
-f_{sty} &= \frac{b}{m} \omega_2^2 \left( f_1 \cos\theta \sin\psi + f_2 (\sin\psi \sin\phi \sin\theta + \cos\phi \sin\psi) + f_3 (-\sin\phi \cos\psi + \cos\phi \sin\psi \sin\theta) \right) \\
-f_{stz} &= \frac{b}{m} \omega_2^2 \left( -f_1 \sin\theta + f_2 (\sin\phi \cos\theta) + f_3 (\cos\phi \cos\theta) \right) \\
-f_{st\phi} &= \frac{J_{TP}}{I_x} \omega_2 (f_2 \dot{\psi} - f_3 \dot{\theta}) + \frac{1}{I_x} \omega_2^2 (b l f_4 + f_1 d) \\
-f_{st\theta} &= \frac{J_{TP}}{I_y} \omega_2 (f_1 \dot{\psi} + f_3 \dot{\phi}) + \frac{1}{I_y} \omega_2^2 (b l f_5 - f_2 d) \\
-f_{st\psi} &= -\frac{J_{TP}}{I_z} \omega_2 (f_2 \dot{\phi} + f_1 \dot{\theta}) - \frac{1}{I_z} \omega_2^2 (b l f_6 + f_3 d)
+u_{fx} &= \left( s_{\phi}s_{\psi} + c_{\phi}s_{\theta}c_{\psi} \right)\frac{F_2}{m}\big((1-\eta)c_{\gamma} - 1\big) 
+          + \frac{F_2}{m}c_{\psi}c_{\theta}s_{\gamma}c_{\alpha}(1-\eta) \\ 
+       &\quad + \left(-s_{\phi}c_{\psi} + c_{\phi}s_{\theta}s_{\psi}\right)\frac{F_2}{m}(1-\eta)s_{\gamma}c_{\alpha}, \\[6pt]
+u_{fy} &= \left(-s_{\phi}c_{\psi} + c_{\phi}s_{\theta}s_{\psi}\right)\frac{F_2}{m}\big((1-\eta)c_{\gamma} - 1\big) 
+          + \frac{F_2}{m}s_{\psi}c_{\theta}s_{\gamma}c_{\alpha}(1-\eta) \\ 
+       &\quad + \left(c_{\phi}c_{\psi} + s_{\phi}s_{\theta}s_{\psi}\right)\frac{F_2}{m}(1-\eta)s_{\gamma}s_{\alpha}, \\[6pt]
+u_{fz} &= \left(c_{\phi}c_{\theta}\right)\frac{F_2}{m}\big((1-\eta)c_{\gamma} - 1\big) 
+          - \frac{F_2}{m}s_{\theta}s_{\gamma}c_{\alpha}(1-\eta) 
+          + s_{\phi}c_{\theta}\frac{F_2}{m}(1-\eta)s_{\gamma}s_{\alpha}.
 \end{aligned}
-$$
+\]
 
-and fault related terms regarding the fault angles $\alpha$, $\beta$, and $\gamma$ are expressed as follows:
-
-$$
+\[
 \begin{aligned}
-f_1 &= \sin\alpha \sin\gamma \\
-f_2 &= -\cos\gamma \sin\beta + \sin\gamma \cos\beta \cos\alpha \\
-f_3 &= \cos\beta \cos\gamma + \cos\alpha \sin\beta \sin\gamma - 1 \\
-f_4 &= f_2 \sin\beta - (1 + f_3) \cos\beta + 1 \\
-f_5 &= f_1 \sin\beta \\
-f_6 &= f_1 \cos\beta
+u_{f\phi} &= (1-\eta)\frac{F_2}{I_x}\left(-\tfrac{d}{b}s_{\gamma}c_{\alpha} - Lc_{\gamma} + \tfrac{L}{1-\eta}\right) 
+           + \frac{J_{TP}}{I_x}\omega_2\left(\dot{\theta}(1-c_{\gamma}) + \dot{\psi}s_{\gamma}s_{\alpha}\right), \\[6pt]
+u_{f\theta} &= (1-\eta)\frac{F_2}{I_y}\left(-\tfrac{d}{b}s_{\gamma}s_{\alpha}\right) 
+           - \frac{J_{TP}}{I_y}\omega_2\left(\dot{\phi}(1-c_{\gamma}) + \dot{\psi}s_{\gamma}c_{\alpha}\right), \\[6pt]
+u_{f\psi} &= (1-\eta)\frac{F_2}{I_z}\left(-\tfrac{d}{b}c_{\gamma} + Lc_{\alpha}s_{\gamma} + \tfrac{d}{b(1-\eta)}\right) 
+           + \frac{J_{TP}}{I_z}\omega_2s_{\gamma}\left(\dot{\theta}c_{\alpha} - \dot{\phi}s_{\alpha}\right).
 \end{aligned}
-$$
+\]
+
 
 ![Quadrotor Fault Scenario](figures/MainFig.jpg)
 
