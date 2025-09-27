@@ -38,7 +38,7 @@ The Assumptions regarding the mathematical modeling are described as follows:
 
 **Assumption 3.** After the fault occurrence, the moment of inertia and the mass value of the drone will not change.
 
-The deflections from vertical directions add additional nonlinear terms to the system dynamics mathematically expressed as:
+The system dynamics of the faulty UAV are expressed as follows:
 
 $$
 \begin{aligned}
