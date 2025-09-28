@@ -208,10 +208,14 @@ The use of adaptive laws mitigate incredibly the design process and enable one t
 
    * `MainNFTSMC.m` → optimized controller simulation.
    * `ComparisonResults.m` → Comparative simulation study plots.
-   * `Final_SecondTrajectory.m` → disturbance observer-based TSMC.
+   * `ComparisonResults2_SecondTraj.m` → disturbance observer-based TSMC.
 
----
+-------
 
+## 📖 References
+### M. B. Sajjadi, N. Safaei, and M. Ayati, “Fault‐Observer‐Based Fault‐Tolerant Fuzzy Terminal Sliding Mode Control of a Quadrotor Encountered the Deviation of Rotor Thrust,” Advanced Control for Applications, vol. 7, no. 2, Jun. 2025, doi: 10.1002/adc2.70008.
+
+### P. Eskandarzadeh, M. Ayati, and P. Rezaei, “Disturbance-observer-based terminal sliding mode control of the quadrotor with thrust deviation fault,” Proc Inst Mech Eng C J Mech Eng Sci, Nov. 2024, doi: 10.1177/09544062241270500.
 ----------------
 
 
