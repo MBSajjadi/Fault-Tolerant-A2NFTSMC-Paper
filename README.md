@@ -140,7 +140,7 @@ $$
 s_i = e_i + p_{1i} \text{sign}^{q_{1i}}(e_i) + p_{2i} \text{sign}^{q_{2i}}(\dot{e}_i)
 $$
 
-where $b_i' > 0$, $b_i > 0$, $1 < \lambda_i' < 2$, and $\lambda_i > 1$.  
+where $p_{2i} > 0$, $p_{1i} > 0$, $1 < q_{2i} < 2$, and $q_{1i} > 1$.  
 The control signals along the adaptive laws are calculated by deriving equivalent and switching/fast controllers:
 
 $$
