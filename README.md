@@ -199,45 +199,18 @@ The use of adaptive laws mitigate incredibly the design process and enable one t
 ### 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/MBSajjadi/GANFTSMC_Codes.git
+   git clone https://github.com/MBSajjadi/Fault-Tolerant-A2NFTSMC-Paper.git
    ```
 
 ### 2. Open MATLAB R2022b or newer versions.
 
-### 3. Run `ga` and change settings (if needed) to obtain the optimal control parameters.
-
-### 4. Run the following main scripts:
+### 3. Run the following main scripts:
 
    * `Main_RBFFNN_GANFTSMC.m` → optimized controller simulation.
    * `PlotComparedResults_GANFTSMC_NFTSMC.m` → comparison plots.
    * `Final_SecondTrajectory.m` → disturbance observer-based TSMC.
 
-* **Main_RBFFNN_GANFTSMC.m**
-  Runs the optimized **RBFNN + GANFTSMC** controller.
-  Outputs system states, control signals, error signals, and **3D trajectory** of the faulty quadrotor.
-
-* **PlotComparedResults_GANFTSMC_NFTSMC.m**
-  Compares the outcomes of the proposed **RBFNN + GANFTSMC** with an **NFTSMC**, specially the angular velocities of the rotors and torques.
-
-* **Final_SecondTrajectory.m**
-  Shows results of **Disturbance-Observer-Based TSMC** for additional comparison.
-
 ---
-
-## 📊 Results
-
-### 1. Trajectory Tracking
-
-* GANFTSMC achieves accurate path tracking even under rotor deviation.
-* NFTSMC shows larger overshoots.
-
-### 2. Control Efforts
-
-* GANFTSMC reduces input magnitudes while maintaining robustness.
-
-### 3. Fault Tolerance
-
-* Trajectory tracking and estimation errors converge to zero in a finite time for DOBTSMC and the proposed GANFTSMC+RBFNN. Still, the reaching time is faster in GANFTSMC.
 
 ----------------
 
