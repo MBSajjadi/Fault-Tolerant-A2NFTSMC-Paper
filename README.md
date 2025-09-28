@@ -154,10 +154,7 @@ $$
 
 
 $$
-u_{\psi} = \frac{-bI_z}{d} \Bigg( 
-p_{2\psi}^{-1} q_{2\psi}^{-1} | \dot{e}_{\psi} |^{(2-q_{2\psi})} \, \text{sign}(\dot{e}_{\psi}) \big(1 + p_{1\psi} q_{1\psi} |e_{\psi}|^{(q_{1\psi}-1)}\big) 
-- \ddot{\psi}_d + f_{\psi} + k_{1\psi}s_{\psi} + \hat{k}_{2\psi}\,\text{sign}(s_{\psi}) + \hat{u}_{f\psi} 
-\Bigg)
+u_{\psi} = \frac{-bI_z}{d} \Bigg(p_{2\psi}^{-1} q_{2\psi}^{-1} | \dot{e}_{\psi} |^{(2-q_{2\psi})} \text{sign}(\dot{e}_{\psi}) \big(1 + p_{1\psi} q_{1\psi} |e_{\psi}|^{(q_{1\psi}-1)}\big)-\ddot{\psi}_d + f_{\psi} + k_{1\psi}s_{\psi} + \hat{k}_{2\psi}\text{sign}(s_{\psi}) + \hat{u}_{f\psi}\Bigg)
 $$  
 
 $$
