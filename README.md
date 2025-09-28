@@ -206,7 +206,7 @@ The use of adaptive laws mitigate incredibly the design process and enable one t
 
 ### 3. Run the following main scripts:
 
-   * `Main_RBFFNN_GANFTSMC.m` → optimized controller simulation.
+   * `MainNFTSMC.m` → optimized controller simulation.
    * `PlotComparedResults_GANFTSMC_NFTSMC.m` → comparison plots.
    * `Final_SecondTrajectory.m` → disturbance observer-based TSMC.
 
