@@ -130,6 +130,7 @@ $$
 $$
 
 where $X_j$ are the measurements of GPS for linear velocities and Gyroscope for angular velocities.
+
 -----------------
 ## 🎯 Robust Trajectory Tracking and Path Following Control
 
