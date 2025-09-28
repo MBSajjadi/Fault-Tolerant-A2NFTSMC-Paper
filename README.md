@@ -120,6 +120,15 @@ $$r_{ui} = \frac{k_{u1i}}{T_w} \int_{t-T_w}^{t} r_i(\tau)\mathrm{d}\tau + \frac{
 
 $$r_{li} = \frac{k_{l1i}}{T_w} \int_{t-T_w}^{t} r_i(\tau)\mathrm{d}\tau + \frac{k_{l2i}}{T_w} \int_{t-T_w}^{t} \left( r_i(\tau) - \frac{1}{T_w}\int_{t-T_w}^{t} r_i(\beta)\mathrm{d}\beta \right) \mathrm{d}\tau + k_{l3i}$$ 
 
+Once the fault is detected, a nonlinear observer will be utilized to estimate its time-varying nature and use these estimation signals in the control unit to reduce the control efforts:
+
+$$
+\begin{aligned}
+\hat{u}_{fi}=Z_i+\lambda_iX_j\\
+\dot{Z}_i=-\lambda_iZ_i-lambda_i(\lambda_iX_j+f(X)+g(X)u)
+\end{aligned}
+$$
+
 -----------------
 ## 🎯 Robust Trajectory Tracking and Path Following Control
 
