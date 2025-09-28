@@ -157,25 +157,19 @@ $$
 u_{\psi} = \frac{-bI_z}{d} \Bigg(p_{2\psi}^{-1} q_{2\psi}^{-1} | \dot{e}_{\psi} |^{(2-q_{2\psi})} \text{sign}(\dot{e}_{\psi}) \big(1 + p_{1\psi} q_{1\psi} |e_{\psi}|^{(q_{1\psi}-1)}\big)-\ddot{\psi}_d + f_{\psi} + k_{1\psi}s_{\psi} + \hat{k}_{2\psi}\text{sign}(s_{\psi}) + \hat{u}_{f\psi}\Bigg)
 $$  
 
-$$
-F_T = \frac{-m}{c_{\phi} c_{\theta}} \Bigg( 
-p_{2z}^{-1} q_{2z}^{-1} | \dot{e}_{z} |^{(2-q_{2z})} \, \text{sign}(\dot{e}_{z}) \big(1 + p_{1z} q_{1z} |e_{z}|^{(q_{1z}-1)}\big) 
-- \ddot{z}_d + f_{z} + k_{1z}s_{z} + \hat{k}_{2z}\,\text{sign}(s_{z}) + \hat{u}_{fz} 
-\Bigg)
-$$  
 
 $$
-u_{x} = \frac{-m}{F_T} \Bigg( 
-p_{2x}^{-1} q_{2x}^{-1} | \dot{e}_{x} |^{(2-q_{2x})} \, \text{sign}(\dot{e}_{x}) \big(1 + p_{1x} q_{1x} |e_{x}|^{(q_{1x}-1)}\big) 
-- \ddot{x}_d + f_{x} + k_{1x}s_{x} + \hat{k}_{2x}\,\text{sign}(s_{x}) + \hat{u}_{fx} 
-\Bigg)
+F_T = \frac{-m}{c_{\phi} c_{\theta}} \Bigg(p_{2z}^{-1} q_{2z}^{-1} | \dot{e}_{z} |^{(2-q_{2z})} \text{sign}(\dot{e}_{z}) \big(1 + p_{1z} q_{1z} |e_{z}|^{(q_{1z}-1)}\big)-\ddot{z}_d + f_{z} + k_{1z}s_{z} + \hat{k}_{2z}\text{sign}(s_{z}) + \hat{u}_{fz}\Bigg)
 $$  
 
+
 $$
-u_{y} = \frac{-m}{F_T} \Bigg( 
-p_{2y}^{-1} q_{2y}^{-1} | \dot{e}_{y} |^{(2-q_{2y})} \, \text{sign}(\dot{e}_{y}) \big(1 + p_{1y} q_{1y} |e_{y}|^{(q_{1y}-1)}\big) 
-- \ddot{y}_d + f_{y} + k_{1y}s_{y} + \hat{k}_{2y}\,\text{sign}(s_{y}) + \hat{u}_{fy} 
-\Bigg)
+u_{x} = \frac{-m}{F_T} \Bigg(p_{2x}^{-1} q_{2x}^{-1} | \dot{e}_{x} |^{(2-q_{2x})}\text{sign}(\dot{e}_{x}) \big(1 + p_{1x} q_{1x} |e_{x}|^{(q_{1x}-1)}\big)-\ddot{x}_d + f_{x} + k_{1x}s_{x} + \hat{k}_{2x}\text{sign}(s_{x}) + \hat{u}_{fx}\Bigg)
+$$  
+
+
+$$
+u_{y} = \frac{-m}{F_T} \Bigg(p_{2y}^{-1} q_{2y}^{-1} | \dot{e}_{y} |^{(2-q_{2y})} \text{sign}(\dot{e}_{y}) \big(1 + p_{1y} q_{1y} |e_{y}|^{(q_{1y}-1)}\big)-\ddot{y}_d + f_{y} + k_{1y}s_{y} + \hat{k}_{2y}\text{sign}(s_{y}) + \hat{u}_{fy}\Bigg)
 $$  
 
 
