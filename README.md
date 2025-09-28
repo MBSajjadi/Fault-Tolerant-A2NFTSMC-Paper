@@ -172,6 +172,11 @@ $$
 u_{y} = \frac{-m}{F_T} \Bigg(p_{2y}^{-1} q_{2y}^{-1} | \dot{e}_{y} |^{(2-q_{2y})} \text{sign}(\dot{e}_{y}) \big(1 + p_{1y} q_{1y} |e_{y}|^{(q_{1y}-1)}\big)-\ddot{y}_d + f_{y} + k_{1y}s_{y} + \hat{k}_{2y}\text{sign}(s_{y}) + \hat{u}_{fy}\Bigg)
 $$  
 
+with the adaptive laws:
+
+$$
+\dot{\hat{k}}_{2i}=\sigma_ip_{2i}q_{2i}|\dot{e}_{i}|^{q_{2i}-1}|s_i|         ,$i=x,y,z,\phi,\theta,\psi$
+$$
 
 ---------------
 
