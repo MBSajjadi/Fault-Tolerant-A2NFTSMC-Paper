@@ -178,7 +178,7 @@ $$
 \dot{\hat{k}}_{2i}=\sigma_ip_{2i}q_{2i}|\dot{e}_{i}|^{q_{2i}-1}|s_i|         ,i=x,y,z,\phi,\theta,\psi
 $$
 
----------------
+---------------------
 
 ## 🛠️ Simulation Settings
 
