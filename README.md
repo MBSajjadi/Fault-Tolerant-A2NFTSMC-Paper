@@ -184,11 +184,11 @@ The use of adaptive laws mitigate incredibly the design process and enable one t
 
 ## 🛠️ Simulation Settings
 
-* **Fault Occurrence Time:** t_f=25s$.
-* **Simulation Time:** 70 seconds.
+* **Fault Occurrence Time:** $t_f=25s$.
+* **Simulation Time:** $t=70$ seconds.
 * **Sampling Frequency:** $f_s = 100 Hz$ s.
-* **Noise Variance:** \sigma^2=0.002.
-* **PLOE:** \eta=50\%, at most.
+* **Noise Variance:** $\sigma^2=0.002$.
+* **PLOE:** $\eta=50\%$, at most.
 * **Fault Angles:** at most $50^{\circ}$ for $\alpha$, $\gamma$.
 * **Initial Conditions:** $X_0=[2,0,2,0,0,0,0,0,0,0,0,0]^T$.
 
