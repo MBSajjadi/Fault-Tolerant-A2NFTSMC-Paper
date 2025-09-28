@@ -148,10 +148,8 @@ u_{\phi} = \frac{-I_x}{L} \Bigg( p_{2\phi}^{-1} q_{2\phi}^{-1} | \dot{e}_{\phi} 
 $$  
 
 $$
-u_{\theta} = \frac{-I_y}{L} \Bigg( 
-p_{2\theta}^{-1} q_{2\theta}^{-1} | \dot{e}_{\theta} |^{(2-q_{2\theta})} \, \text{sign}(\dot{e}_{\theta}) \big(1 + p_{1\theta} q_{1\theta} |e_{\theta}|^{(q_{1\theta}-1)}\big) 
-- \ddot{\theta}_d + f_{\theta} + k_{1\theta}s_{\theta} + \hat{k}_{2\theta}\,\text{sign}(s_{\theta}) + \hat{u}_{f\theta} 
-\Bigg)
+u_{\theta} = \frac{-I_y}{L} \Bigg(p_{2\theta}^{-1} q_{2\theta}^{-1} | \dot{e}_{\theta} |^{(2-q_{2\theta})} \text{sign}(\dot{e}_{\theta}) \big(1 + p_{1\theta} q_{1\theta} |e_{\theta}|^{(q_{1\theta}-1)}\big) 
+- \ddot{\theta}_d + f_{\theta} + k_{1\theta}s_{\theta} + \hat{k}_{2\theta}\text{sign}(s_{\theta}) + \hat{u}_{f\theta}\Bigg)
 $$  
 
 $$
