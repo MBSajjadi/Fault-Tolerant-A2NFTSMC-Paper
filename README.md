@@ -178,15 +178,19 @@ $$
 \dot{\hat{k}}_{2i}=\sigma_ip_{2i}q_{2i}|\dot{e}_{i}|^{q_{2i}-1}|s_i|         ,i=x,y,z,\phi,\theta,\psi
 $$
 
+The use of adaptive laws mitigate incredibly the design process and enable one to obtain the stability conditions and switching control parameters without knowing the upper limits of faults.
+
 ---------------------
 
 ## 🛠️ Simulation Settings
 
-* **Cost Function:** weighted sum of tracking errors and control inputs, with $P_1=diag([1,1,1,1,1,1])$, $P_2=diag([10,10,10,10,10,10])$.
-* **Simulation Time:** 50 seconds.
-* **Sampling Time:** $T_s = 0.001$ s.
-* **Fault Angles:** $\alpha=20^{\circ}$, $\beta=10^{\circ}$, $\gamma=30^{\circ}$.
-* **Initial Conditions:** $X_0=[3,0,1,0,1,0,0,0,0,0,0,0]^T$.
+* **Fault Occurrence Time:** t_f=25s$.
+* **Simulation Time:** 70 seconds.
+* **Sampling Frequency:** $f_s = 100 Hz$ s.
+* **Noise Variance:** \sigma^2=0.002.
+* **PLOE:** \eta=50\%, at most.
+* **Fault Angles:** at most $50^{\circ}$ for $\alpha$, $\gamma$.
+* **Initial Conditions:** $X_0=[2,0,2,0,0,0,0,0,0,0,0,0]^T$.
 
 ------
 
