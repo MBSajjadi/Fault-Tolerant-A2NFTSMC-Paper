@@ -144,10 +144,7 @@ where $b_i' > 0$, $b_i > 0$, $1 < \lambda_i' < 2$, and $\lambda_i > 1$.
 The control signals along the adaptive laws are calculated by deriving equivalent and switching/fast controllers:
 
 $$
-u_{\phi} = \frac{-I_x}{L} \Bigg( 
-p_{2\phi}^{-1} q_{2\phi}^{-1} | \dot{e}_{\phi} |^{(2-q_{2\phi})} \, \text{sign}(\dot{e}_{\phi}) \big(1 + p_{1\phi} q_{1\phi} |e_{\phi}|^{(q_{1\phi}-1)}\big) 
-- \ddot{\phi}_d + f_{\phi} + k_{1\phi}s_{\phi} + \hat{k}_{2\phi}\,\text{sign}(s_{\phi}) + \hat{u}_{f\phi} 
-\Bigg)
+u_{\phi} = \frac{-I_x}{L} \Bigg( p_{2\phi}^{-1} q_{2\phi}^{-1} | \dot{e}_{\phi} |^{(2-q_{2\phi})} \text{sign}(\dot{e}_{\phi}) \big(1 + p_{1\phi} q_{1\phi} |e_{\phi}|^{(q_{1\phi}-1)}\big) - \ddot{\phi}_d + f_{\phi} + k_{1\phi}s_{\phi} + \hat{k}_{2\phi}\text{sign}(s_{\phi}) + \hat{u}_{f\phi} \Bigg)
 $$  
 
 $$
