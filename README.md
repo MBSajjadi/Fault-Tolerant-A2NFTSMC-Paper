@@ -141,55 +141,50 @@ s_i = e_i + p_{1i} \text{sign}^{q_{1i}}(e_i) + p_{2i} \text{sign}^{q_{2i}}(\dot{
 $$
 
 where $b_i' > 0$, $b_i > 0$, $1 < \lambda_i' < 2$, and $\lambda_i > 1$.  
-The tracking errors and their dynamics can be defined as:
+The control signals along the adaptive laws are calculated by deriving equivalent and switching/fast controllers:
 
 $$
-e_i = X_i - X_{di}
-$$
+u_{\phi} = \frac{-I_x}{L} \Bigg( 
+p_{2\phi}^{-1} q_{2\phi}^{-1} | \dot{e}_{\phi} |^{(2-q_{2\phi})} \, \text{sign}(\dot{e}_{\phi}) \big(1 + p_{1\phi} q_{1\phi} |e_{\phi}|^{(q_{1\phi}-1)}\big) 
+- \ddot{\phi}_d + f_{\phi} + k_{1\phi}s_{\phi} + \hat{k}_{2\phi}\,\text{sign}(s_{\phi}) + \hat{u}_{f\phi} 
+\Bigg)
+$$  
 
 $$
-\dot{e}_i = \dot{X}_i - X_{d(i+1)}
-$$
+u_{\theta} = \frac{-I_y}{L} \Bigg( 
+p_{2\theta}^{-1} q_{2\theta}^{-1} | \dot{e}_{\theta} |^{(2-q_{2\theta})} \, \text{sign}(\dot{e}_{\theta}) \big(1 + p_{1\theta} q_{1\theta} |e_{\theta}|^{(q_{1\theta}-1)}\big) 
+- \ddot{\theta}_d + f_{\theta} + k_{1\theta}s_{\theta} + \hat{k}_{2\theta}\,\text{sign}(s_{\theta}) + \hat{u}_{f\theta} 
+\Bigg)
+$$  
 
 $$
-\ddot{e}_i = \ddot{X}_i - \dot{X}_{d(i+1)}
-$$
-
-in which:
-
-$$
-X_{di} =
-\begin{bmatrix}
-x_d & \dot{x}_d & y_d & \dot{y}_d & z_d & \dot{z}_d &
-\phi_d & \dot{\phi}_d & \theta_d & \dot{\theta}_d &
-\psi_d & \dot{\psi}_d
-\end{bmatrix}^T
-$$
-
-The derivatives of the sliding surfaces can then be calculated, for $k=1,2,3,4,5,6$:
+u_{\psi} = \frac{-bI_z}{d} \Bigg( 
+p_{2\psi}^{-1} q_{2\psi}^{-1} | \dot{e}_{\psi} |^{(2-q_{2\psi})} \, \text{sign}(\dot{e}_{\psi}) \big(1 + p_{1\psi} q_{1\psi} |e_{\psi}|^{(q_{1\psi}-1)}\big) 
+- \ddot{\psi}_d + f_{\psi} + k_{1\psi}s_{\psi} + \hat{k}_{2\psi}\,\text{sign}(s_{\psi}) + \hat{u}_{f\psi} 
+\Bigg)
+$$  
 
 $$
-\dot{s}_i =\dot{e}_i \left(1 + b_i \lambda_i |\dot{e}_i|^{\lambda_i - 1}\right)+b_i' \lambda_i' |\dot{e}_i|^{\lambda_i' - 1}\left(f_j + g_{kk} u_k + f_{stj} - \dot{X}_{d(i+1)} \right)
-$$
-
-Since the fault vector $f_{st}$ is unknown, the nominal equivalent control law may be obtained, for $j=2,4,6,8,10,12$:
-
-$$
-u_{k,eq} =-g_{kk}^{-1} b_i'^{-1} \lambda_i'^{-1}|\dot{e}_i|^{2-\lambda_i'} \text{sign}(\dot{e}_i)\left(1 + b_i \lambda_i |\dot{e}_i|^{\lambda_i - 1}\right)-g_{kk}^{-1}\left(f_j -\dot{X}_{d(i+1)}\right)
-$$
-
-For the robustness of the controller against unknown external faults and disturbances, the fast-switching control may be added to the equivalent one:
+F_T = \frac{-m}{c_{\phi} c_{\theta}} \Bigg( 
+p_{2z}^{-1} q_{2z}^{-1} | \dot{e}_{z} |^{(2-q_{2z})} \, \text{sign}(\dot{e}_{z}) \big(1 + p_{1z} q_{1z} |e_{z}|^{(q_{1z}-1)}\big) 
+- \ddot{z}_d + f_{z} + k_{1z}s_{z} + \hat{k}_{2z}\,\text{sign}(s_{z}) + \hat{u}_{fz} 
+\Bigg)
+$$  
 
 $$
-u_{k,sw} = - g_{kk}^{-1}\left(\eta_k s_i + K_k \text{sign}(s_i)\right)
-$$
+u_{x} = \frac{-m}{F_T} \Bigg( 
+p_{2x}^{-1} q_{2x}^{-1} | \dot{e}_{x} |^{(2-q_{2x})} \, \text{sign}(\dot{e}_{x}) \big(1 + p_{1x} q_{1x} |e_{x}|^{(q_{1x}-1)}\big) 
+- \ddot{x}_d + f_{x} + k_{1x}s_{x} + \hat{k}_{2x}\,\text{sign}(s_{x}) + \hat{u}_{fx} 
+\Bigg)
+$$  
 
-where $\eta_k$ and $K_k$ are positive constants.  
-Hence, the final control law may be derived with the substitution of the estimated faults obtained by the RBFNN:
+$$
+u_{y} = \frac{-m}{F_T} \Bigg( 
+p_{2y}^{-1} q_{2y}^{-1} | \dot{e}_{y} |^{(2-q_{2y})} \, \text{sign}(\dot{e}_{y}) \big(1 + p_{1y} q_{1y} |e_{y}|^{(q_{1y}-1)}\big) 
+- \ddot{y}_d + f_{y} + k_{1y}s_{y} + \hat{k}_{2y}\,\text{sign}(s_{y}) + \hat{u}_{fy} 
+\Bigg)
+$$  
 
-$$
-u_k = - g_{kk}^{-1} \Big[b_i'^{-1} \lambda_i'^{-1} |\dot{e}_i|^{2-\lambda_i'} \text{sign}(\dot{e}_i)\left(1 + b_i \lambda_i |\dot{e}_i|^{\lambda_i - 1}\right)+ f_j+\hat{\omega}_ih_i - \dot{X}_{d(i+1)} + \eta_k s_i + K_k \text{sign}(s_i)\Big]
-$$
 
 ---------------
 
