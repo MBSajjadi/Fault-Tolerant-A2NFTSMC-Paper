@@ -125,10 +125,11 @@ Once the fault is detected, a nonlinear observer will be utilized to estimate it
 $$
 \begin{aligned}
 \hat{u}_{fi}=Z_i+\lambda_iX_j\\
-\dot{Z}_i=-\lambda_iZ_i-lambda_i(\lambda_iX_j+f(X)+g(X)u)
+\dot{Z}_i=-\lambda_iZ_i-\lambda_i(\lambda_iX_j+f(X)+g(X)u)
 \end{aligned}
 $$
 
+where $X_j$ are the measurements of GPS for linear velocities and Gyroscope for angular velocities.
 -----------------
 ## 🎯 Robust Trajectory Tracking and Path Following Control
 
