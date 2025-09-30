@@ -188,7 +188,7 @@ The use of adaptive laws mitigate incredibly the design process and enable one t
 * **Simulation Time:** $t=70$ seconds.
 * **Sampling Frequency:** $f_s = 100 Hz$.
 * **Noise Variance:** $\sigma^2=0.002$.
-* **PLOE:** $\eta=50%$, at most.
+* **PLOE:** $\eta=0.6$, at most.
 * **Fault Angles:** at most $50^{\circ}$ for $\alpha$, $\gamma$.
 * **Initial Conditions:** $X_0=[2,0,2,0,0,0,0,0,0,0,0,0]^T$.
 
